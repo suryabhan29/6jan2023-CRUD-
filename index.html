@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>javascript CRUD using html form and table part-1</title>
+        <style>
+            body{
+                background-color: skyblue;
+            }
+        </style>
+        <script>
+            // before the closing of head tag
+        </script>
+    </head>
+    <body>
+        <form>
+            <input name="name" type="text" placeholder="please enter your name">
+            <input name="surname" type="text" placeholder="please enter your surname">
+            <input name="address" type="text" placeholder="Enter your address">
+            <input type="button" value="submit" onclick="suryabhan('ok')" >
+        </form>
+        <hr>
+        <table border="1" id="mytable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>suraj</td>
+                    <td>singh</td>
+                    <td>neemuch</td>
+                    <td>
+                        <button>View</button>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <script>
+            // there are two way to define a function
+            //1. old way
+            function suraj(){
+                alert("suraj");
+            }
+            //2. new way [fatt arrow   =>  es6 2015]
+            var x;  // global varribel
+            let n=document.querySelector('input[name="name"]');
+            var sn=document.querySelector('input[name="surname"]');
+            var addr=document.querySelector('input[name="address"]');
+
+            var tbdy = document.querySelector("table#mytable tbody")   // decentent selector
+            var suryabhan =()=>{
+               alert("suryabhan");
+               let y;    // local variabel
+                console.log(n.value);
+                console.log(sn.value);
+                console.log(addr.value);
+                console.log(tbdy);
+                tbdy.innerHTML += `<tr>
+                                        <td>${n.value}</td>
+                                        <td>${sn.value}</td>
+                                        <td>${addr.value}</td>
+                                        <td>
+                                            <button>View</button>
+                                            <button>Edit</button>
+                                            <button onclick="deleteElement(this)">Delete</button>
+                                        </td>
+                                    </tr>`;   //append technique
+                    // proper indentation is a first rule
+                    n.value = sn.value =  addr.value = '';  // i used here dry principle
+                    
+                   
+                    // DRY principle is imp
+
+                    }
+                
+                let deleteElement =(s)=>{   // s is a formal argument
+                  //  console.log(s);
+                   s.closest('tr').remove();
+                   console.log(s.closest('tr'))
+                }
+            
+
+
+
+
+
+
+
+
+
+            // before the closing of body tag
+        </script>
+    </body>
+</html>
