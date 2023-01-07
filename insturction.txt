@@ -1,0 +1,42 @@
+lecture 76  javascript crud
+
+CRUD
+ C = Create
+ R = Read
+ U = Update
+ D = Delete
+
+th = table head cell
+td = table data cell
+
+th humesha thead me aayega
+td humesha tbody me aayega
+
+HR = horizontal rule
+
+event humeha on se start hoti he
+
+function se related 2 bate--->
+1.define the function
+2.call the function
+
+function ko define karne ke do tarike he 1.. old   2..new [fat arrow es6 2015]
+
+jiyadar tar kam ab fat arrow ki madad se hi kregye
+
+name attribute is very important to form and input
+
+jab tk name attribute nhi legy tb tk querystring nhi bnti he
+
+input ki value pkdne ke liye .value ka use krte hain
+
+`` ki 2 khas bate 
+1. isme variable subsictuion ho jate h
+2. isme agar multiline bhi ho jaye to bhi error nhi aati hain
+
+
+
+
+
+
+
